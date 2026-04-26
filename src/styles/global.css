@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+ 
+:root {
+  --color-primary: #e8500a;     /* narandzasta - glavna boja */
+  --color-dark: #0f0f1a;        /* tamna - footer background, tekst */
+  --color-white: #ffffff;       /* bela */
+  --color-light: #f5f4f0;       /* svetla pozadina */
+  --color-gray: #555555;        /* sivi tekst */
+  --color-border: #e8e8e8;      /* border boja */
+}
+ 
 .app_main {
   padding-top: 68px;
 }
-
-/*NAVBAR*/
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+ 
+/* ============================================
+   NAVBAR
+   ============================================ */
  
 .navbar {
   position: fixed;
@@ -25,7 +37,7 @@
  
 .navbar--scrolled {
   background: rgba(255, 255, 255, 0.95);
-  border-bottom-color: #ebebeb;
+  border-bottom-color: var(--color-border);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
  
@@ -57,13 +69,13 @@
   font-family: 'Syne', sans-serif;
   font-size: 20px;
   font-weight: 800;
-  color: #0f0f1a;
+  color: var(--color-dark);
   letter-spacing: -0.5px;
 }
  
 .navbar__logo-text em {
   font-style: normal;
-  color: #e8500a;
+  color: var(--color-primary);
 }
  
 /* --- Links --- */
@@ -78,7 +90,7 @@
 .navbar__link {
   font-size: 14px;
   font-weight: 500;
-  color: #555;
+  color: var(--color-gray);
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 8px;
@@ -87,12 +99,12 @@
 }
  
 .navbar__link:hover {
-  color: #0f0f1a;
+  color: var(--color-dark);
   background: #f4f4f4;
 }
  
 .navbar__link--active {
-  color: #e8500a;
+  color: var(--color-primary);
   font-weight: 600;
 }
  
@@ -103,7 +115,7 @@
   left: 12px;
   right: 12px;
   height: 2px;
-  background: #e8500a;
+  background: var(--color-primary);
   border-radius: 2px;
 }
  
@@ -133,20 +145,20 @@
 }
  
 .navbar__btn--ghost {
-  color: #0f0f1a;
-  border: 1.5px solid #e0e0e0;
+  color: var(--color-dark);
+  border: 1.5px solid var(--color-border);
   background: transparent;
 }
  
 .navbar__btn--ghost:hover {
-  border-color: #0f0f1a;
+  border-color: var(--color-dark);
   background: #f4f4f4;
 }
  
 .navbar__btn--solid {
-  color: #fff;
-  background: #e8500a;
-  border: 1.5px solid #e8500a;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
 }
  
 .navbar__btn--solid:hover {
@@ -173,7 +185,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: #0f0f1a;
+  background: var(--color-dark);
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.25s ease;
   transform-origin: center;
@@ -206,8 +218,8 @@
     top: 68px;
     left: 0;
     right: 0;
-    background: #fff;
-    border-bottom: 1.5px solid #ebebeb;
+    background: var(--color-white);
+    border-bottom: 1.5px solid var(--color-border);
     flex-direction: column;
     align-items: stretch;
     padding: 16px 24px 24px;
@@ -243,14 +255,14 @@
     padding: 11px;
   }
 }
-/*-----------------------------------------*/
-
-/*Company card*/
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
-
+ 
+/* ============================================
+   COMPANY CARD
+   ============================================ */
+ 
 .company-card {
-  background: #ffffff;
-  border: 1.5px solid #e8e8e8;
+  background: var(--color-white);
+  border: 1.5px solid var(--color-border);
   border-radius: 16px;
   padding: 24px 20px 18px;
   width: 100%;
@@ -261,28 +273,28 @@
   font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
-
+ 
 .company-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  border-color: #c5b4f0;
+  border-color: var(--color-primary);
 }
-
+ 
 /* --- Logo --- */
-
+ 
 .company-card__logo {
   width: 64px;
   height: 64px;
   border-radius: 14px;
   border: 1.5px solid #ececec;
-  background: #f5f3ff;
+  background: #fff5f0;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 14px;
   overflow: hidden;
 }
-
+ 
 .company-card__logo img {
   width: 100%;
   height: 100%;
@@ -290,31 +302,31 @@
   padding: 8px;
   box-sizing: border-box;
 }
-
+ 
 .company-card__initials {
   font-size: 18px;
   font-weight: 700;
-  color: #7c3aed;
+  color: var(--color-primary);
   letter-spacing: 0.5px;
 }
-
+ 
 /* --- Info --- */
-
+ 
 .company-card__name {
   font-size: 15px;
   font-weight: 700;
-  color: #1a1a2e;
+  color: var(--color-dark);
   margin: 0 0 5px;
   line-height: 1.3;
 }
-
+ 
 .company-card__industry {
   font-size: 12px;
-  color: #9b8cca;
+  color: #c46a3a;
   margin: 0 0 10px;
   font-weight: 500;
 }
-
+ 
 .company-card__location {
   display: inline-flex;
   align-items: center;
@@ -323,45 +335,46 @@
   color: #999;
   margin-bottom: 16px;
 }
-
+ 
 .company-card__location svg {
   opacity: 0.6;
   flex-shrink: 0;
 }
-
+ 
 /* --- Footer --- */
-
+ 
 .company-card__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1.5px solid #f0f0f0;
+  border-top: 1.5px solid var(--color-border);
 }
-
+ 
 .company-card__positions {
   font-size: 12.5px;
   font-weight: 600;
-  color: #7c3aed;
-  background: #f0ebff;
+  color: var(--color-primary);
+  background: #fff0e8;
   padding: 3px 10px;
   border-radius: 6px;
 }
-
+ 
 .company-card__arrow {
   font-size: 16px;
   color: #ccc;
   transition: color 0.18s, transform 0.18s;
 }
-
+ 
 .company-card:hover .company-card__arrow {
-  color: #7c3aed;
+  color: var(--color-primary);
   transform: translateX(3px);
 }
-
-
-/*HOME STRANA*/
-
+ 
+/* ============================================
+   HOME STRANA
+   ============================================ */
+ 
 .home__grid {
   padding: 20px;
   display: grid;
@@ -369,13 +382,280 @@
   gap: 20px;
 }
 
-/*FOOTER*/
-
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+/* ============================================
+   HERO
+   ============================================ */
+ 
+.hero {
+  position: relative;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+ 
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(232, 80, 10, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(232, 80, 10, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f0f1a 100%);
+}
+ 
+/* subtle grid texture */
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+ 
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+ 
+/* --- Left --- */
+ 
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+ 
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+ 
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+ 
+.hero__stat-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+ 
+.hero__stat-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+ 
+.hero__stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+}
+ 
+.hero__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0;
+  white-space: pre-line;
+}
+ 
+.hero__dot {
+  color: var(--color-primary);
+}
+ 
+/* --- Form --- */
+ 
+.hero__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+ 
+.hero__form-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+ 
+.hero__form-hint {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  margin-left: 6px;
+}
+ 
+.hero__select-wrap {
+  position: relative;
+  max-width: 360px;
+}
+ 
+.hero__select {
+  width: 100%;
+  padding: 14px 44px 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+ 
+.hero__select:focus {
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+ 
+.hero__select option {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+ 
+.hero__select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+ 
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.2s;
+}
+ 
+.hero__btn span {
+  font-size: 18px;
+  transition: transform 0.18s;
+}
+ 
+.hero__btn:hover {
+  background: #cf4408;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 80, 10, 0.45);
+}
+ 
+.hero__btn:hover span {
+  transform: translateX(3px);
+}
+ 
+/* --- Right grid --- */
+ 
+.hero__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+ 
+/* ============================================
+   COMPANIES SECTION
+   ============================================ */
+ 
+.home__companies {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.home__section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -0.5px;
+  margin: 0 0 32px;
+}
+ 
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+ 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+ 
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 60px 24px;
+  }
+ 
+  .hero__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+ 
+@media (max-width: 600px) {
+  .hero__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .hero__title {
+    font-size: 30px;
+  }
+ 
+  .hero__stat-number {
+    font-size: 22px;
+  }
+}
+ 
+/* ============================================
+   FOOTER
+   ============================================ */
  
 .footer {
-  background: #0f0f1a;
-  color: #fff;
+  background: var(--color-dark);
+  color: var(--color-white);
   font-family: 'DM Sans', sans-serif;
   margin-top: auto;
 }
@@ -399,14 +679,14 @@
   font-family: 'Syne', sans-serif;
   font-size: 20px;
   font-weight: 800;
-  color: #fff;
+  color: var(--color-white);
   letter-spacing: -0.5px;
   margin-bottom: 14px;
 }
  
 .footer__logo em {
   font-style: normal;
-  color: #e8500a;
+  color: var(--color-primary);
 }
  
 .footer__tagline {
@@ -441,8 +721,8 @@
 }
  
 .footer__social:hover {
-  border-color: #e8500a;
-  color: #e8500a;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   background: rgba(232, 80, 10, 0.08);
 }
  
@@ -458,7 +738,7 @@
   font-family: 'Syne', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 6px;
@@ -473,7 +753,7 @@
 }
  
 .footer__link:hover {
-  color: #fff;
+  color: var(--color-white);
 }
  
 /* --- Bottom --- */
@@ -530,5 +810,3 @@
     padding: 16px 20px;
   }
 }
-
-/*------------------------------------------------------------*/
