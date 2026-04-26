@@ -1,5 +1,7 @@
 import CompanyCard from "../components/Home/CompanyCard";
+import CityCard from "../components/Home/CityCard";
 import "../styles/global.css"
+import { useState } from "react";
 
 const companies = [
   {
@@ -23,6 +25,13 @@ const companies = [
     location: "Niš, Srbija",
     openPositions: 2,
   },
+  {
+    id: 4,
+    companyName: "DataFlow",
+    industry: "Analitika podataka",
+    location: "Niš, Srbija",
+    openPositions: 2,
+  }
 ];
 
 const cities = [
@@ -34,11 +43,11 @@ const cities = [
   { id: 6, city: "Subotica", jobCount: 213, image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=400&q=80" },
 ];
 
+
+
 const Home = () => {
+  const [selectedCity, setSelectedCity] = useState("");
   return (
-
-    
-
     <div className="home">
       <section className="hero">
         <div className="hero__bg" />
@@ -105,14 +114,6 @@ const Home = () => {
             </div>
           </div>
  
-        </div>
-      </section>
- 
-      {/* Companies section */}
-      <section className="home__companies">
-        <h2 className="home__section-title">Istaknute kompanije</h2>
-        <div className="home__grid">
-          {/* CompanyCard komponente idu ovde */}
         </div>
       </section>
 
