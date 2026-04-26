@@ -28,7 +28,6 @@ const companies = [
 const Home = () => {
   return (
     <div className="home">
-      <h1>Kompanije</h1>
       <div className="home__grid">
         {companies.map((company) => (
           <CompanyCard key={company.id} {...company} />
