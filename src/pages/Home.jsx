@@ -1,5 +1,7 @@
 import CompanyCard from "../components/Home/CompanyCard";
 import CityCard from "../components/Home/CityCard";
+import CategoriesSection from "../components/Home/CategoriesSection";
+import MissionSection from "../components/Home/MissionSection";
 import "../styles/global.css"
 import { useState } from "react";
 
@@ -116,7 +118,9 @@ const Home = () => {
  
         </div>
       </section>
-
+      <MissionSection/>         
+      
+      <CategoriesSection/>
       <div className="home__grid">
         {companies.map((company) => (
           <CompanyCard key={company.id} {...company} />
