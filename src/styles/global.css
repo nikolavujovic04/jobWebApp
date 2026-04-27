@@ -725,6 +725,123 @@
 .city-card:hover .city-card__count {
   color: rgba(255, 255, 255, 0.95);
 }
+
+/* ============================================
+   CATEGORY CARD
+   ============================================ */
+
+.category-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 36px 28px 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+ 
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232, 80, 10, 0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 20px;
+}
+ 
+.category-card:hover,
+.category-card--active {
+  background: rgba(232, 80, 10, 0.08);
+  border-color: rgba(232, 80, 10, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(232, 80, 10, 0.15);
+}
+ 
+.category-card:hover::before,
+.category-card--active::before {
+  opacity: 1;
+}
+ 
+/* --- Icon --- */
+ 
+.category-card__icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(232, 80, 10, 0.12);
+  border: 1.5px solid rgba(232, 80, 10, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+ 
+.category-card:hover .category-card__icon-wrap,
+.category-card--active .category-card__icon-wrap {
+  background: rgba(232, 80, 10, 0.2);
+  border-color: rgba(232, 80, 10, 0.5);
+  transform: scale(1.08);
+}
+ 
+.category-card__icon {
+  font-size: 28px;
+  line-height: 1;
+}
+ 
+/* --- Text --- */
+ 
+.category-card__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+ 
+.category-card__count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  transition: color 0.2s;
+}
+ 
+.category-card:hover .category-card__count,
+.category-card--active .category-card__count {
+  color: rgba(232, 80, 10, 0.8);
+}
+ 
+/* --- Arrow --- */
+ 
+.category-card__arrow {
+  margin-top: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+ 
+.category-card:hover .category-card__arrow,
+.category-card--active .category-card__arrow {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
  
 /* ============================================
    FOOTER
