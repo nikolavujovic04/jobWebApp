@@ -2,6 +2,8 @@ import CompanyCard from "../components/Home/CompanyCard";
 import CityCard from "../components/Home/CityCard";
 import CategoriesSection from "../components/Home/CategoriesSection";
 import MissionSection from "../components/Home/MissionSection";
+import CTABanner from "../components/Home/CTABanner";
+import HowItWorks from "../components/Home/HowItWorks";
 import "../styles/global.css"
 import { useState } from "react";
 
@@ -120,11 +122,8 @@ const Home = () => {
       </section>
       <MissionSection/>             
       <CategoriesSection/>
-      <div className="home__grid">
-        {companies.map((company) => (
-          <CompanyCard key={company.id} {...company} />
-        ))}
-      </div>
+      <HowItWorks/>
+      <CTABanner/>
     </div>
   );
 };
