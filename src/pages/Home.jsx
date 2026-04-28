@@ -118,8 +118,7 @@ const Home = () => {
  
         </div>
       </section>
-      <MissionSection/>         
-      
+      <MissionSection/>             
       <CategoriesSection/>
       <div className="home__grid">
         {companies.map((company) => (

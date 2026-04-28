@@ -1292,6 +1292,225 @@
     padding: 72px 16px;
   }
 }
+
+/* ============================================
+   HOW IT WORKS
+   ============================================ */
+
+.hiw {
+  background: var(--color-white);
+  padding: 110px 24px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.hiw::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,80,10,0.2), transparent);
+}
+ 
+.hiw__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+ 
+/* --- Header --- */
+ 
+.hiw__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+ 
+.hiw__eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  padding: 5px 14px;
+  background: rgba(232, 80, 10, 0.07);
+  border: 1px solid rgba(232, 80, 10, 0.18);
+  border-radius: 20px;
+}
+ 
+.hiw__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -1px;
+  margin: 0;
+}
+ 
+.hiw__subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+ 
+/* --- Steps --- */
+ 
+.hiw__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+ 
+.hiw__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+  animation: stepFadeIn 0.5s ease both;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+ 
+@keyframes stepFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* number badge */
+.hiw__step-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+ 
+/* icon */
+.hiw__step-icon-wrap {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.hiw__step-icon {
+  font-size: 30px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  border: 2px solid rgba(232, 80, 10, 0.15);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(232, 80, 10, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+ 
+.hiw__step:hover .hiw__step-icon {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(232, 80, 10, 0.18);
+  border-color: rgba(232, 80, 10, 0.4);
+}
+ 
+.hiw__step-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 26px;
+  border: 1.5px dashed rgba(232, 80, 10, 0.15);
+  animation: ringRotate 12s linear infinite;
+}
+ 
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+ 
+.hiw__step:hover .hiw__step-ring {
+  border-color: rgba(232, 80, 10, 0.35);
+}
+ 
+/* text */
+.hiw__step-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 0 8px;
+  letter-spacing: -0.2px;
+}
+ 
+.hiw__step-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  color: #888;
+  line-height: 1.65;
+  margin: 0;
+}
+ 
+/* connector arrow between steps */
+.hiw__connector {
+  position: absolute;
+  top: 54px;
+  right: -2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  z-index: 2;
+}
+ 
+.hiw__connector-line {
+  width: 28px;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(232,80,10,0.2), rgba(232,80,10,0.5));
+  border-radius: 2px;
+}
+ 
+.hiw__connector-arrow {
+  color: rgba(232, 80, 10, 0.5);
+  flex-shrink: 0;
+}
+ 
+/* --- Responsive --- */
+ 
+@media (max-width: 900px) {
+  .hiw__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 0;
+  }
+ 
+  .hiw__connector {
+    display: none;
+  }
+}
+ 
+@media (max-width: 520px) {
+  .hiw {
+    padding: 72px 16px;
+  }
+ 
+  .hiw__steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
  
 /* ============================================
    FOOTER
