@@ -1734,6 +1734,311 @@
     font-size: 32px;
   }
 }
+
+/* ============================================
+   FEATURED CARD JOB
+   ============================================ */
+
+   .fjob {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+ 
+/* --- Image --- */
+ 
+.fjob__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+ 
+.fjob:hover .fjob__image {
+  transform: scale(1.07);
+}
+ 
+/* --- Overlay --- */
+ 
+.fjob__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 18, 0.95) 0%,
+    rgba(10, 10, 18, 0.5) 45%,
+    rgba(10, 10, 18, 0.1) 100%
+  );
+  transition: background 0.35s ease;
+}
+ 
+.fjob:hover .fjob__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 18, 0.97) 0%,
+    rgba(232, 80, 10, 0.18) 55%,
+    rgba(10, 10, 18, 0.15) 100%
+  );
+}
+ 
+/* --- Tag --- */
+ 
+.fjob__tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 7px;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+ 
+.tag--orange { background: rgba(232, 80, 10, 0.88); color: #fff; }
+.tag--red    { background: rgba(220, 38, 38, 0.88); color: #fff; }
+.tag--teal   { background: rgba(13, 148, 136, 0.88); color: #fff; }
+.tag--white  { background: rgba(255, 255, 255, 0.18); color: #fff; border: 1px solid rgba(255, 255, 255, 0.3); }
+ 
+/* --- Content --- */
+ 
+.fjob__content {
+  position: relative;
+  z-index: 2;
+  padding: 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+ 
+.fjob:hover .fjob__content {
+  transform: translateY(0);
+}
+ 
+.fjob__company {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+ 
+.fjob__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+ 
+/* --- Meta --- */
+ 
+.fjob__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 2px;
+}
+ 
+.fjob__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.45);
+}
+ 
+.fjob__meta-item svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+ 
+/* --- Footer --- */
+ 
+.fjob__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 8px;
+}
+ 
+.fjob__salary {
+  font-family: 'Syne', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+ 
+.fjob__btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 7px 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  white-space: nowrap;
+}
+ 
+.fjob__btn:hover {
+  background: #cf4408;
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(232, 80, 10, 0.45);
+}
+
+/* ============================================
+   FEATURED JOBS
+   ============================================ */
+
+   .featured {
+  background: var(--color-light, #f7f5f0);
+  padding: 110px 24px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,80,10,0.18), transparent);
+}
+ 
+.featured__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+ 
+/* --- Header --- */
+ 
+.featured__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+ 
+.featured__header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.featured__eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  padding: 5px 14px;
+  background: rgba(232, 80, 10, 0.07);
+  border: 1px solid rgba(232, 80, 10, 0.18);
+  border-radius: 20px;
+  width: fit-content;
+}
+ 
+.featured__title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -1px;
+  margin: 0;
+}
+ 
+.featured__subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #888;
+  margin: 0;
+}
+ 
+.featured__all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1.5px solid rgba(232, 80, 10, 0.25);
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+ 
+.featured__all-link svg { transition: transform 0.2s; }
+ 
+.featured__all-link:hover {
+  background: rgba(232, 80, 10, 0.06);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+ 
+.featured__all-link:hover svg { transform: translateX(3px); }
+ 
+/* --- Grid --- */
+ 
+.featured__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+ 
+/* --- Responsive --- */
+ 
+@media (max-width: 1024px) {
+  .featured__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media (max-width: 600px) {
+  .featured {
+    padding: 72px 16px;
+  }
+ 
+  .featured__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .featured__grid {
+    grid-template-columns: 1fr;
+  }
+}
  
 /* ============================================
    FOOTER

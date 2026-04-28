@@ -4,6 +4,7 @@ import CategoriesSection from "../components/Home/CategoriesSection";
 import MissionSection from "../components/Home/MissionSection";
 import CTABanner from "../components/Home/CTABanner";
 import HowItWorks from "../components/Home/HowItWorks";
+import FeaturedJobs from "../components/Home/FeaturedJobs";
 import "../styles/global.css"
 import { useState } from "react";
 
@@ -120,9 +121,10 @@ const Home = () => {
  
         </div>
       </section>
+      
       <MissionSection/>             
       <CategoriesSection/>
-      <HowItWorks/>
+      <FeaturedJobs/>
       <CTABanner/>
     </div>
   );
