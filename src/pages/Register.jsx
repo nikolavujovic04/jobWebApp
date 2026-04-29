@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import FormInput from "../components/Register/FormInput";
 import FormButton from "../components/Register/FormButton";
-import "../styles/globa.css";
+import "../styles/global.css";
  
 const Register = () => {
   const [type, setType] = useState("kandidat"); // "kandidat" | "kompanija"
@@ -101,8 +101,14 @@ const Register = () => {
  
       {/* Right panel — forma */}
       <div className="register__form-side">
+        
         <div className="register__form-wrap">
- 
+          <Link to="/" className="register__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Nazad na početnu
+        </Link>
           <div className="register__form-header">
             <h1 className="register__form-title">Kreiraj nalog</h1>
             <p className="register__form-sub">

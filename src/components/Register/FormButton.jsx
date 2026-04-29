@@ -1,4 +1,4 @@
-import "../../styles/globa.css";
+import "../../styles/global.css";
  
 const FormButton = ({
   children,
