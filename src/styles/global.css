@@ -2133,6 +2133,99 @@
   content: '⚠';
   font-size: 11px;
 }
+
+/* ============================================
+   FORM BUTTON REGISTER
+   ============================================ */
+
+   .form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s, box-shadow 0.2s, opacity 0.2s;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
+ 
+.form-btn--full {
+  width: 100%;
+}
+ 
+/* --- Variants --- */
+ 
+.form-btn--primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+ 
+.form-btn--primary:hover:not(:disabled) {
+  background: #cf4408;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 80, 10, 0.35);
+}
+ 
+.form-btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+ 
+.form-btn--ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid rgba(232, 80, 10, 0.3);
+}
+ 
+.form-btn--ghost:hover:not(:disabled) {
+  background: rgba(232, 80, 10, 0.06);
+  border-color: var(--color-primary);
+}
+ 
+.form-btn--dark {
+  background: var(--color-dark);
+  color: #ffffff;
+}
+ 
+.form-btn--dark:hover:not(:disabled) {
+  background: #1e1e30;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 15, 26, 0.25);
+}
+ 
+/* --- Disabled & Loading --- */
+ 
+.form-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+ 
+.form-btn--loading {
+  pointer-events: none;
+}
+ 
+.form-btn__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: btnSpin 0.7s linear infinite;
+  display: inline-block;
+}
+ 
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   REGISTER
+   ============================================ */
  
 /* ============================================
    FOOTER
