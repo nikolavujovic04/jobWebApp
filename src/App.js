@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { Routes, Route } from "react-router-dom";
 import Register from './pages/Register';
+import Jobs from './pages/Jobs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <main className="app_main">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/poslovi" element={<Jobs/>}/>
             </Routes>
           </main>
           <Footer />
