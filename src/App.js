@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Jobs from './pages/Jobs';
+import About from './pages/About';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/poslovi" element={<Jobs/>}/>
+              <Route path="/o-nama" element={<About />} />
             </Routes>
           </main>
           <Footer />
